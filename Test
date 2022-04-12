@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class Test {
+    public static void main(String[] args) {
+        System.out.print("Enter color of traffic lights: ");
+        Scanner sc = new Scanner(System.in);
+        String phrase1 = sc.next();
+
+        if (phrase1 = 'red') {
+            System.out.println("Red color. Stay.");
+        } else if (phrase1 = 'yellow') {
+            System.out.println("Yellow color. Wait.");
+        } else if (phrase1 = 'green') {
+            System.out.println("Green color. Go.");
+        } else {
+            System.out.println("Please, enter valid color");
+        }
+    }
+}
