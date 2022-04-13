@@ -1,19 +1,24 @@
+package com.javatutorialhq.java.examples;
+
 import java.util.Scanner;
 
 class Test {
     public static void main(String[] args) {
         System.out.print("Enter color of traffic lights: ");
-        Scanner sc = new Scanner(System.in);
-        String phrase1 = sc.next();
+        Scanner scan = new Scanner(System.in);
+        String color = scan.next();
+        String r = new String ("Red");
+        String y = new String ("Yellow");
+        String g = new String ("Green");
 
-        if (phrase1 = 'red') {
-            System.out.println("Red color. Stay.");
-        } else if (phrase1 = 'yellow') {
-            System.out.println("Yellow color. Wait.");
-        } else if (phrase1 = 'green') {
-            System.out.println("Green color. Go.");
-        } else {
-            System.out.println("Please, enter valid color");
+                 if (color.equalsIgnoreCase(r)) {
+                System.out.println("Red color. Stay."); }
+            else if (color.equalsIgnoreCase(y)) {
+                System.out.println("Yellow color. Wait."); }
+            else if (color.equalsIgnoreCase(g)) {
+                System.out.println("Green color. Go."); }
+            else {
+                System.out.println("Please enter a valid color (red, yellow, green) ");
+                }
+            }
         }
-    }
-}
