@@ -9,13 +9,14 @@ public class Calculator {
         double operand2;
         char operation;
         double result = 0;
-        char eit = 's';
-            do {
-             if (calculatorOperation == 'c') {
+            System.out.println("c- reset, s - stop");
+        do {
+             if (calculatorOperation == 'c' || calculatorOperation == 'C') {
                 System.out.println("Enter operand 1: ");
                 operand1 = sc.nextInt();
                 System.out.println("Enter operation: ");
-                operation = sc.next().charAt(0);
+                 operation = sc.next().charAt(0);
+
         } else {
              operand1 = result;
              operation = calculatorOperation;
@@ -28,7 +29,7 @@ public class Calculator {
             calculatorOperation = sc.next().charAt(0);
 
         }
-         while (calculatorOperation != 's');
+        while (calculatorOperation != 's' && calculatorOperation != 'S');
     }
 
     public static double calculate(double operand1, char operation, double operand2) {
