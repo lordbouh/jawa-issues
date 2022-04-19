@@ -24,7 +24,7 @@ public class Calculator {
             System.out.println("Enter operand 2: ");
             operand2 = sc.nextInt();
             result = calculate (operand1, operation, operand2);
-            System.out.println(result);
+            System.out.println("Result: " + result);
             System.out.println("Enter operation: ");
             calculatorOperation = sc.next().charAt(0);
 
@@ -33,16 +33,20 @@ public class Calculator {
     }
 
     public static double calculate(double operand1, char operation, double operand2) {
-     return switch (operation){
+      return switch (operation){
         case '+' -> operand1 + operand2;
         case '-' -> operand1 - operand2;
         case '*' -> operand1 * operand2;
-        case '/' -> operand1 / operand2;
-        default -> {
+         case '/' -> {
+             if (operand2 == 0) {
+                  System.out.println("cannot be divided by 0! ");
+              }
+                 yield  operand1 / operand2;
+         }
+         default -> {
             System.out.println("Incorrect operation");
             yield 0;
-        }
-    };
+            }
+        };
     }
-
 }
